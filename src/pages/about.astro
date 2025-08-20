@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FloatingNavbar from '../components/FloatingNavbar.astro';
+import LavaLamp from '../components/LavaLamp.astro';
+---
+
+<Layout title="About - Onerverse">
+  <main class="relative min-h-screen">
+    <LavaLamp />
+    <FloatingNavbar />
+    
+    <div class="container mx-auto px-4 py-24 relative z-10">
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white/15 backdrop-blur-2xl rounded-3xl shadow-2xl p-8 lg:p-12 border border-white/30">
+          <h1 class="text-5xl font-bold text-black/90 mb-8 mix-blend-exclusion">About Onerverse</h1>
+          
+          <div class="space-y-6 text-black/80 leading-relaxed">
+            <p class="text-lg">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum. 
+              Donec auctor a lacus in tincidunt. Proin blandit, tortor at ultrices tincidunt, elit sapien 
+              facilisis lectus, nec accumsan nulla massa a odio.
+            </p>
+            
+            <h2 class="text-2xl font-semibold text-black/90 mt-8 mb-4">Our Mission</h2>
+            <p>
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
+              totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae 
+              dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
+            </p>
+            
+            <h2 class="text-2xl font-semibold text-black/90 mt-8 mb-4">Our Vision</h2>
+            <p>
+              But I must explain to you how all this mistaken idea of denouncing pleasure and praising pain was 
+              born and I will give you a complete account of the system, and expound the actual teachings of the 
+              great explorer of the truth, the master-builder of human happiness.
+            </p>
+            
+            <div class="grid md:grid-cols-3 gap-6 mt-12">
+              <div class="bg-white/20 backdrop-blur-xl rounded-xl p-6 border border-white/30">
+                <div class="text-3xl font-bold text-black/90 mb-2">100+</div>
+                <div class="text-black/70">Projects Completed</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-xl rounded-xl p-6 border border-white/30">
+                <div class="text-3xl font-bold text-black/90 mb-2">50+</div>
+                <div class="text-black/70">Happy Clients</div>
+              </div>
+              <div class="bg-white/20 backdrop-blur-xl rounded-xl p-6 border border-white/30">
+                <div class="text-3xl font-bold text-black/90 mb-2">5+</div>
+                <div class="text-black/70">Years Experience</div>
+              </div>
+            </div>
+            
+            <h2 class="text-2xl font-semibold text-black/90 mt-12 mb-4">Our Values</h2>
+            <ul class="list-disc list-inside space-y-2 text-black/70">
+              <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit</li>
+              <li>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</li>
+              <li>Ut enim ad minim veniam, quis nostrud exercitation ullamco</li>
+              <li>Duis aute irure dolor in reprehenderit in voluptate velit</li>
+              <li>Excepteur sint occaecat cupidatat non proident</li>
+            </ul>
+            
+            <p class="mt-8">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum 
+              deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non 
+              provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>

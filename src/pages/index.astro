@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import LavaLamp from '../components/LavaLamp.astro';
+import FloatingNavbar from '../components/FloatingNavbar.astro';
+---
+
+<Layout title="Onerverse">
+  <main>
+    <div class="h-screen w-screen flex flex-col justify-center items-center relative">
+      <FloatingNavbar />
+      <LavaLamp />
+      <h1 class="text-6xl md:text-8xl font-bold tracking-tight mix-blend-exclusion text-white whitespace-nowrap z-10">
+        Onerverse
+      </h1>
+      <p class="text-lg md:text-xl text-center text-white mix-blend-exclusion max-w-2xl leading-relaxed z-10">
+        Where thoughts take shape and consciousness flows like liquid mercury through infinite dimensions.
+      </p>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+</style>

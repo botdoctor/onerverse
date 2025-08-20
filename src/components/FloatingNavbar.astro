@@ -1,0 +1,152 @@
+---
+---
+
+<nav id="floating-navbar" class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 transition-all duration-500">
+  <div id="navbar-container" class="navbar-glass rounded-full px-6 py-3 shadow-2xl transition-all duration-500">
+    <div class="flex items-center space-x-8">
+      <a href="/" data-nav="home" class="nav-item active relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">
+        Home
+        <div class="nav-glow absolute inset-0 rounded-full"></div>
+      </a>
+      <a href="/about" data-nav="about" class="nav-item relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">
+        About
+      </a>
+      <a href="/services" data-nav="services" class="nav-item relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">
+        Services
+      </a>
+      <a href="/contact" data-nav="contact" class="nav-item relative px-4 py-2 rounded-full text-sm font-medium transition-all duration-300">
+        Contact
+      </a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  function initNavbar() {
+    const navbar = document.getElementById('floating-navbar');
+    const navItems = document.querySelectorAll('.nav-item');
+    
+    let isScrolled = false;
+    
+    function handleScroll() {
+      const newScrolled = window.scrollY > 20;
+      if (newScrolled !== isScrolled) {
+        isScrolled = newScrolled;
+        if (navbar) {
+          if (isScrolled) {
+            navbar.classList.add('scale-95');
+            navbar.classList.remove('scale-100');
+          } else {
+            navbar.classList.add('scale-100');
+            navbar.classList.remove('scale-95');
+          }
+        }
+      }
+    }
+    
+    window.addEventListener('scroll', handleScroll);
+    
+    // Set active state based on current page
+    const currentPath = window.location.pathname;
+    navItems.forEach(item => {
+      const href = item.getAttribute('href');
+      item.classList.remove('active');
+      const glow = item.querySelector('.nav-glow');
+      if (glow) {
+        (glow as HTMLElement).style.display = 'none';
+      }
+      
+      if ((currentPath === '/' && href === '/') || 
+          (currentPath !== '/' && href === currentPath)) {
+        item.classList.add('active');
+        if (!glow) {
+          const glowDiv = document.createElement('div');
+          glowDiv.className = 'nav-glow absolute inset-0 rounded-full';
+          item.appendChild(glowDiv);
+        } else {
+          (glow as HTMLElement).style.display = 'block';
+        }
+      }
+    });
+  }
+  
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initNavbar);
+  } else {
+    initNavbar();
+  }
+</script>
+
+<style>
+  .scale-95 {
+    transform: translate(-50%, 0) scale(0.95);
+  }
+  
+  .scale-100 {
+    transform: translate(-50%, 0) scale(1);
+  }
+  
+  .navbar-glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.25));
+    backdrop-filter: blur(24px) saturate(200%) contrast(1.2);
+    -webkit-backdrop-filter: blur(24px) saturate(200%) contrast(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 
+      0 8px 32px 0 rgba(31, 38, 135, 0.37),
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.25),
+      0 0 80px rgba(255, 255, 255, 0.15);
+  }
+  
+  .nav-item {
+    color: rgba(10, 10, 10, 0.85);
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+  }
+  
+  .nav-item:hover {
+    color: rgba(0, 0, 0, 1);
+    background: rgba(255, 255, 255, 0.3);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.7);
+  }
+  
+  .nav-item.active {
+    color: rgba(0, 0, 0, 1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.5));
+    box-shadow: 
+      inset 0 2px 4px 0 rgba(255, 255, 255, 0.3),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    text-shadow: 0 1px 3px rgba(255, 255, 255, 0.8);
+  }
+  
+  .nav-glow {
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.25), transparent);
+    animation: liquid-glow 3s ease-in-out infinite;
+  }
+  
+  @keyframes liquid-glow {
+    0%, 100% {
+      opacity: 0.4;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }
+  }
+  
+  .navbar-glass::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: 9999px;
+    padding: 1px;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    -webkit-mask-composite: xor;
+    pointer-events: none;
+    background: linear-gradient(135deg, 
+      rgba(255, 255, 255, 0.3),
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.3));
+  }
+</style>

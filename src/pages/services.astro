@@ -1,0 +1,137 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FloatingNavbar from '../components/FloatingNavbar.astro';
+import LavaLamp from '../components/LavaLamp.astro';
+---
+
+<Layout title="Services - Onerverse">
+  <main class="relative min-h-screen">
+    <LavaLamp />
+    <FloatingNavbar />
+    
+    <div class="container mx-auto px-4 py-24 relative z-10">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h1 class="text-5xl font-bold text-black/90 mb-4 mix-blend-exclusion">Our Services</h1>
+          <p class="text-xl text-black/70 max-w-2xl mx-auto">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service 1 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">Digital Strategy</h3>
+            <p class="text-black/70">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            </p>
+          </div>
+          
+          <!-- Service 2 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">Web Development</h3>
+            <p class="text-black/70">
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+          
+          <!-- Service 3 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-green-500 to-emerald-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">UI/UX Design</h3>
+            <p class="text-black/70">
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            </p>
+          </div>
+          
+          <!-- Service 4 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">Performance Optimization</h3>
+            <p class="text-black/70">
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
+          
+          <!-- Service 5 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">Analytics & Insights</h3>
+            <p class="text-black/70">
+              Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
+            </p>
+          </div>
+          
+          <!-- Service 6 -->
+          <div class="bg-white/20 backdrop-blur-2xl rounded-2xl p-6 border border-white/30 hover:bg-white/25 transition-all duration-300 group">
+            <div class="w-14 h-14 rounded-full bg-gradient-to-r from-pink-500 to-rose-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+              <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold text-black/90 mb-3">Custom Solutions</h3>
+            <p class="text-black/70">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.
+            </p>
+          </div>
+        </div>
+        
+        <div class="mt-16 bg-white/20 backdrop-blur-2xl rounded-3xl p-8 lg:p-12 border border-white/30">
+          <h2 class="text-3xl font-bold text-black/90 mb-6 text-center">Why Choose Us?</h2>
+          <div class="grid md:grid-cols-2 gap-6">
+            <div class="flex items-start space-x-4">
+              <div class="w-2 h-2 rounded-full bg-purple-400 mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 class="text-black/90 font-semibold mb-1">Lorem Ipsum Dolor</h4>
+                <p class="text-black/70 text-sm">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-2 h-2 rounded-full bg-pink-400 mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 class="text-black/90 font-semibold mb-1">Sit Amet Consectetur</h4>
+                <p class="text-black/70 text-sm">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-2 h-2 rounded-full bg-blue-400 mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 class="text-black/90 font-semibold mb-1">Adipiscing Elit Sed</h4>
+                <p class="text-black/70 text-sm">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+              </div>
+            </div>
+            <div class="flex items-start space-x-4">
+              <div class="w-2 h-2 rounded-full bg-green-400 mt-2 flex-shrink-0"></div>
+              <div>
+                <h4 class="text-black/90 font-semibold mb-1">Eiusmod Tempor</h4>
+                <p class="text-black/70 text-sm">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
