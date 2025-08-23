@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import DemoOne from '../../Examples/demovoidhero.tsx';
+---
+
+<Layout title="Void - Onerverse">
+  <main>
+    <DemoOne client:load />
+  </main>
+</Layout>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+</style>

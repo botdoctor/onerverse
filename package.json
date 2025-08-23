@@ -13,7 +13,10 @@
     "node": ">=20.0.0"
   },
   "dependencies": {
+    "@astrojs/react": "^4.3.0",
     "astro": "^4.16.18",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
     "three": "^0.171.0"
   },
   "devDependencies": {
