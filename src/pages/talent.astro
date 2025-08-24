@@ -1,0 +1,179 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Talent - Onerverse">
+  <div class="relative min-h-screen overflow-hidden bg-black text-white">
+    <!-- Glass floating navbar -->
+    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-opacity-5 border-opacity-10 bg-white border-white border rounded-full pt-3 pr-4 pb-3 pl-4 shadow-xl backdrop-blur-md">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"></circle>
+            <circle cx="12" cy="12" r="3" fill="white"></circle>
+          </svg>
+          <span class="ml-2 text-sm font-medium">Onerverse</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-xs text-gray-300 ml-8">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <a href="/void" class="hover:text-white transition-colors">Void</a>
+          <a href="/talent" class="text-white">Talent</a>
+          <a href="#" class="hover:text-white transition-colors">Process</a>
+          <a href="#" class="hover:text-white transition-colors">Journal</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero section -->
+    <div class="relative z-10 pt-32 pb-20 px-6">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <span class="px-3 py-1 text-xs font-medium text-white bg-white bg-opacity-10 backdrop-blur-sm rounded-full mb-8 border border-white border-opacity-20 inline-block">Collaborators</span>
+          <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent mb-6">
+            Our Talent Network
+          </h1>
+          <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
+            We collaborate with exceptional creators and influencers who share our vision for digital innovation
+          </p>
+        </div>
+        
+        <!-- Talent Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Talent Card 1 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                AJ
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Alex Johnson</h3>
+                <p class="text-gray-400 text-sm">@alexcreates</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">Digital artist and 3D designer with 500K+ followers. Specializes in futuristic UI/UX concepts.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Instagram</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Twitter</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">TikTok</a>
+            </div>
+          </div>
+          
+          <!-- Talent Card 2 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                SM
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Sarah Martinez</h3>
+                <p class="text-gray-400 text-sm">@sarahtech</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">Tech influencer and developer advocate. 300K+ YouTube subscribers focused on web3 innovation.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">YouTube</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">LinkedIn</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Twitter</a>
+            </div>
+          </div>
+          
+          <!-- Talent Card 3 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-teal-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                MK
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Marcus Kim</h3>
+                <p class="text-gray-400 text-sm">@marcusdesigns</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">Motion designer and creative director. 750K+ followers across platforms. Expert in brand storytelling.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Instagram</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Behance</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Dribbble</a>
+            </div>
+          </div>
+          
+          <!-- Talent Card 4 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                LC
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Luna Chen</h3>
+                <p class="text-gray-400 text-sm">@lunavr</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">VR/AR content creator and metaverse architect. 420K+ followers. Building immersive digital experiences.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">TikTok</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Instagram</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Twitch</a>
+            </div>
+          </div>
+          
+          <!-- Talent Card 5 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                RT
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Riley Thompson</h3>
+                <p class="text-gray-400 text-sm">@rileycodes</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">Full-stack developer and coding educator. 280K+ followers. Making programming accessible to everyone.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">GitHub</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Twitter</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Dev.to</a>
+            </div>
+          </div>
+          
+          <!-- Talent Card 6 -->
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-6 hover:bg-opacity-10 transition-all duration-300">
+            <div class="flex items-center mb-4">
+              <div class="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                JW
+              </div>
+              <div class="ml-4">
+                <h3 class="text-white font-semibold text-lg">Jordan White</h3>
+                <p class="text-gray-400 text-sm">@jordanstyle</p>
+              </div>
+            </div>
+            <p class="text-gray-300 mb-4">Fashion tech influencer and digital stylist. 950K+ followers. Bridging fashion and technology.</p>
+            <div class="flex space-x-3">
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Instagram</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">Pinterest</a>
+              <a href="#" class="text-xs px-3 py-1 bg-white bg-opacity-10 rounded-full hover:bg-opacity-20 transition-colors">TikTok</a>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="mt-20 text-center">
+          <div class="bg-white bg-opacity-5 backdrop-blur-md rounded-2xl border border-white border-opacity-10 p-12 max-w-3xl mx-auto">
+            <h2 class="text-3xl font-bold mb-4">Join Our Network</h2>
+            <p class="text-gray-300 mb-8">Are you a creator interested in collaborating with Onerverse? We're always looking for talented individuals to join our growing network.</p>
+            <a href="#" class="inline-block px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl">
+              Apply to Collaborate
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+</style>

@@ -1,12 +1,64 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import DemoOne from '../../Examples/demovoidhero.tsx';
 ---
 
 <Layout title="Void - Onerverse">
-  <main>
-    <DemoOne client:load />
-  </main>
+  <div class="relative min-h-screen overflow-hidden bg-black text-white">
+    <!-- Spline 3D background -->
+    <div class="fixed inset-0 z-0">
+      <iframe 
+        src="https://my.spline.design/thresholddarkambientui-v0gkZCfi6zXm69kE0wccy70f/" 
+        frameborder="0" 
+        width="100%" 
+        height="100%" 
+        class="w-full h-full">
+      </iframe>
+    </div>
+    
+    <!-- Glass floating navbar -->
+    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-opacity-5 border-opacity-10 bg-white border-white border rounded-full pt-3 pr-4 pb-3 pl-4 shadow-xl backdrop-blur-md">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"></circle>
+            <circle cx="12" cy="12" r="3" fill="white"></circle>
+          </svg>
+          <span class="ml-2 text-sm font-medium">Onerverse</span>
+        </div>
+        <div class="hidden md:flex items-center space-x-6 text-xs text-gray-300 ml-8">
+          <a href="/" class="hover:text-white transition-colors">Home</a>
+          <a href="/talent" class="hover:text-white transition-colors">Talent</a>
+          <a href="#" class="hover:text-white transition-colors">Process</a>
+          <a href="#" class="hover:text-white transition-colors">Journal</a>
+          <a href="#" class="hover:text-white transition-colors">Contact</a>
+        </div>
+      </div>
+    </nav>
+    
+    <!-- Hero content -->
+    <div class="relative z-10 flex flex-col items-center justify-center px-6 pt-32 pb-32 md:pt-40 md:pb-40 text-center min-h-screen">
+      <div class="absolute top-1/2 left-1/2 w-[600px] h-[600px] -translate-x-1/2 -translate-y-1/2 bg-white opacity-5 blur-[100px] rounded-full pointer-events-none"></div>
+      
+      <h1 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent max-w-4xl leading-tight tracking-tighter">
+        Sculpted Light and Shadow
+      </h1>
+      
+      <p class="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mt-6">
+        A dynamic form drifts through luminous voids — edges curve, surfaces gleam, 
+        and subtle glow pulses like a heartbeat. Motion and material merge, 
+        revealing the art hidden within geometry.
+      </p>
+      
+      <div class="mt-12 flex flex-col sm:flex-row gap-4">
+        <a href="/" class="px-8 py-3 bg-white text-black font-medium rounded-full hover:bg-gray-200 transition-all duration-300 shadow-lg hover:shadow-xl">
+          Explore Home
+        </a>
+        <a href="/new" class="px-8 py-3 bg-white bg-opacity-10 backdrop-blur-sm text-white font-medium rounded-full hover:bg-opacity-20 transition-all duration-300 border border-white border-opacity-20">
+          View New
+        </a>
+      </div>
+    </div>
+  </div>
 </Layout>
 
 <style>
