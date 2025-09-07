@@ -1,0 +1,134 @@
+---
+export interface Props {
+  sensitivity?: number;
+}
+
+const { sensitivity = -1 } = Astro.props;
+
+const exampleImages = [
+  {
+    url: "https://images.unsplash.com/photo-1727341554370-80e0fe9ad082?q=80&w=2276&auto=format&fit=crop",
+    depth: 0.5,
+    position: "top-[8%] left-[11%]",
+    size: "w-16 h-16 md:w-24 md:h-24"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1640680608781-2e4199dd1579?q=80&w=3087&auto=format&fit=crop",
+    depth: 1,
+    position: "top-[10%] left-[32%]",
+    size: "w-20 h-20 md:w-28 md:h-28"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1726083085160-feeb4e1e5b00?q=80&w=3024&auto=format&fit=crop",
+    depth: 2,
+    position: "top-[2%] left-[53%]",
+    size: "w-28 h-40 md:w-40 md:h-52"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1562016600-ece13e8ba570?q=80&w=2838&auto=format&fit=crop",
+    depth: 1,
+    position: "top-[0%] left-[83%]",
+    size: "w-24 h-24 md:w-32 md:h-32"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1624344965199-ed40391d20f2?q=80&w=2960&auto=format&fit=crop",
+    depth: 1,
+    position: "top-[40%] left-[2%]",
+    size: "w-28 h-28 md:w-36 md:h-36"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1677338354108-223e807fb1bd?q=80&w=3087&auto=format&fit=crop",
+    depth: 2,
+    position: "top-[70%] left-[77%]",
+    size: "w-28 h-28 md:w-36 md:h-48"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1689553079282-45df1b35741b?q=80&w=3087&auto=format&fit=crop",
+    depth: 4,
+    position: "top-[73%] left-[15%]",
+    size: "w-40 md:w-52 h-full"
+  },
+  {
+    url: "https://images.unsplash.com/photo-1721968317938-cf8c60fccd1a?q=80&w=2728&auto=format&fit=crop",
+    depth: 1,
+    position: "top-[80%] left-[50%]",
+    size: "w-24 h-24 md:w-32 md:h-32"
+  }
+];
+---
+
+<div class="floating-container absolute inset-0 overflow-hidden" data-sensitivity={sensitivity}>
+  {exampleImages.map((img, index) => (
+    <div 
+      class={`floating-element absolute ${img.position} will-change-transform`}
+      data-depth={img.depth}
+      style={`animation-delay: ${index * 0.15}s;`}
+    >
+      <img 
+        src={img.url} 
+        alt=""
+        class={`${img.size} object-cover rounded-lg hover:scale-105 duration-200 cursor-pointer transition-transform opacity-0 animate-fadeIn`}
+        loading="lazy"
+      />
+    </div>
+  ))}
+</div>
+
+<style>
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+</style>
+
+<script>
+  const container = document.querySelector('.floating-container') as HTMLElement;
+  const elements = container?.querySelectorAll('.floating-element') as NodeListOf<HTMLElement>;
+  const sensitivity = parseFloat(container?.dataset.sensitivity || '-1');
+  
+  let mouseX = 0;
+  let mouseY = 0;
+  let currentX = 0;
+  let currentY = 0;
+  
+  const easingFactor = 0.05;
+  
+  // Track mouse position relative to viewport center
+  document.addEventListener('mousemove', (e) => {
+    const centerX = window.innerWidth / 2;
+    const centerY = window.innerHeight / 2;
+    mouseX = (e.clientX - centerX) / centerX;
+    mouseY = (e.clientY - centerY) / centerY;
+  });
+  
+  // Animation loop
+  function animate() {
+    // Smooth easing
+    currentX += (mouseX - currentX) * easingFactor;
+    currentY += (mouseY - currentY) * easingFactor;
+    
+    elements.forEach((element) => {
+      const depth = parseFloat(element.dataset.depth || '1');
+      const strength = (depth * sensitivity) / 20;
+      
+      const translateX = currentX * strength * 100;
+      const translateY = currentY * strength * 100;
+      
+      element.style.transform = `translate3d(${translateX}px, ${translateY}px, 0)`;
+    });
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+</script>

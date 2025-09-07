@@ -1,29 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import FloatingNavbar from '../components/FloatingNavbar.astro';
 ---
 
-<Layout title="Talent - Onerverse">
+<Layout title="Roster - Onerverse">
   <div class="relative min-h-screen overflow-hidden bg-black text-white">
-    <!-- Glass floating navbar -->
-    <nav class="fixed top-6 left-1/2 transform -translate-x-1/2 z-50 bg-opacity-5 border-opacity-10 bg-white border-white border rounded-full pt-3 pr-4 pb-3 pl-4 shadow-xl backdrop-blur-md">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center">
-          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"></circle>
-            <circle cx="12" cy="12" r="3" fill="white"></circle>
-          </svg>
-          <span class="ml-2 text-sm font-medium">Onerverse</span>
-        </div>
-        <div class="hidden md:flex items-center space-x-6 text-xs text-gray-300 ml-8">
-          <a href="/" class="hover:text-white transition-colors">Home</a>
-          <a href="/void" class="hover:text-white transition-colors">Void</a>
-          <a href="/talent" class="text-white">Talent</a>
-          <a href="#" class="hover:text-white transition-colors">Process</a>
-          <a href="#" class="hover:text-white transition-colors">Journal</a>
-          <a href="#" class="hover:text-white transition-colors">Contact</a>
-        </div>
-      </div>
-    </nav>
+    <!-- Floating navbar with liquid glass effect -->
+    <FloatingNavbar />
     
     <!-- Hero section -->
     <div class="relative z-10 pt-32 pb-20 px-6">
@@ -31,7 +14,7 @@ import Layout from '../layouts/Layout.astro';
         <div class="text-center mb-16">
           <span class="px-3 py-1 text-xs font-medium text-white bg-white bg-opacity-10 backdrop-blur-sm rounded-full mb-8 border border-white border-opacity-20 inline-block">Collaborators</span>
           <h1 class="text-5xl md:text-6xl font-bold bg-gradient-to-r from-purple-400 via-pink-500 to-blue-500 bg-clip-text text-transparent mb-6">
-            Our Talent Network
+            Our Roster
           </h1>
           <p class="text-lg md:text-xl text-gray-300 max-w-3xl mx-auto">
             We collaborate with exceptional creators and influencers who share our vision for digital innovation
